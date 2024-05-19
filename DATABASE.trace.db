@@ -1,99 +1,92 @@
-2024-05-18 17:47:42 database: wrong user or password; user: "TEST"
-org.h2.message.DbException: Nombre de usuario ó password incorrecto
-Wrong user name or password [28000-214]
-	at org.h2.message.DbException.get(DbException.java:223)
-	at org.h2.message.DbException.get(DbException.java:199)
-	at org.h2.message.DbException.get(DbException.java:188)
-	at org.h2.engine.Engine.openSession(Engine.java:154)
-	at org.h2.engine.Engine.openSession(Engine.java:222)
-	at org.h2.engine.Engine.createSession(Engine.java:201)
-	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
-	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
-	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
-	at org.h2.server.web.WebServer.getConnection(WebServer.java:808)
-	at org.h2.server.web.WebApp.login(WebApp.java:1033)
-	at org.h2.server.web.WebApp.process(WebApp.java:226)
-	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
-	at org.h2.server.web.WebThread.process(WebThread.java:152)
-	at org.h2.server.web.WebThread.run(WebThread.java:101)
-	at java.base/java.lang.Thread.run(Thread.java:829)
-Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Nombre de usuario ó password incorrecto
-Wrong user name or password [28000-214]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:510)
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
-	... 16 more
-2024-05-18 17:54:34 database: wrong user or password; user: "TEST"
-org.h2.message.DbException: Nombre de usuario ó password incorrecto
-Wrong user name or password [28000-214]
-	at org.h2.message.DbException.get(DbException.java:223)
-	at org.h2.message.DbException.get(DbException.java:199)
-	at org.h2.message.DbException.get(DbException.java:188)
-	at org.h2.engine.Engine.openSession(Engine.java:154)
-	at org.h2.engine.Engine.openSession(Engine.java:222)
-	at org.h2.engine.Engine.createSession(Engine.java:201)
-	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
-	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
-	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
-	at org.h2.server.web.WebServer.getConnection(WebServer.java:808)
-	at org.h2.server.web.WebApp.login(WebApp.java:1033)
-	at org.h2.server.web.WebApp.process(WebApp.java:226)
-	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
-	at org.h2.server.web.WebThread.process(WebThread.java:152)
-	at org.h2.server.web.WebThread.run(WebThread.java:101)
-	at java.base/java.lang.Thread.run(Thread.java:829)
-Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Nombre de usuario ó password incorrecto
-Wrong user name or password [28000-214]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:510)
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
-	... 16 more
-2024-05-18 17:54:55 jdbc[16]: exception
-org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "alumno" not found (this database is empty); SQL statement:
-select * from alumno [42104-214]
-2024-05-18 18:07:46 database: wrong user or password; user: "TEST"
-org.h2.message.DbException: Nombre de usuario ó password incorrecto
-Wrong user name or password [28000-214]
-	at org.h2.message.DbException.get(DbException.java:223)
-	at org.h2.message.DbException.get(DbException.java:199)
-	at org.h2.message.DbException.get(DbException.java:188)
-	at org.h2.engine.Engine.openSession(Engine.java:154)
-	at org.h2.engine.Engine.openSession(Engine.java:222)
-	at org.h2.engine.Engine.createSession(Engine.java:201)
-	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
-	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
-	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
-	at org.h2.server.web.WebServer.getConnection(WebServer.java:808)
-	at org.h2.server.web.WebApp.login(WebApp.java:1033)
-	at org.h2.server.web.WebApp.process(WebApp.java:226)
-	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
-	at org.h2.server.web.WebThread.process(WebThread.java:152)
-	at org.h2.server.web.WebThread.run(WebThread.java:101)
-	at java.base/java.lang.Thread.run(Thread.java:829)
-Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Nombre de usuario ó password incorrecto
-Wrong user name or password [28000-214]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:510)
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
-	... 16 more
-2024-05-18 18:07:50 database: wrong user or password; user: "TEST"
-org.h2.message.DbException: Nombre de usuario ó password incorrecto
-Wrong user name or password [28000-214]
-	at org.h2.message.DbException.get(DbException.java:223)
-	at org.h2.message.DbException.get(DbException.java:199)
-	at org.h2.message.DbException.get(DbException.java:188)
-	at org.h2.engine.Engine.openSession(Engine.java:154)
-	at org.h2.engine.Engine.openSession(Engine.java:222)
-	at org.h2.engine.Engine.createSession(Engine.java:201)
-	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:338)
-	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:122)
-	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:288)
-	at org.h2.server.web.WebServer.getConnection(WebServer.java:808)
-	at org.h2.server.web.WebApp.login(WebApp.java:1033)
-	at org.h2.server.web.WebApp.process(WebApp.java:226)
-	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
-	at org.h2.server.web.WebThread.process(WebThread.java:152)
-	at org.h2.server.web.WebThread.run(WebThread.java:101)
-	at java.base/java.lang.Thread.run(Thread.java:829)
-Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Nombre de usuario ó password incorrecto
-Wrong user name or password [28000-214]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:510)
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
-	... 16 more
+2024-05-19 01:58:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "alumno" ya existe
+Table "alumno" already exists; SQL statement:
+create table alumno (id integer not null, apellido varchar(255), edad integer not null, estado varchar(255), nombre varchar(255), primary key (id)) [42101-214]
+2024-05-19 02:23:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "alumno" ya existe
+Table "alumno" already exists; SQL statement:
+create table alumno (id integer not null, apellido varchar(255), edad integer not null, estado varchar(255), nombre varchar(255), primary key (id)) [42101-214]
+2024-05-19 02:23:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "alumno" ya existe
+Table "alumno" already exists; SQL statement:
+create table alumno (id integer not null, apellido varchar(255), edad integer not null, estado varchar(255), nombre varchar(255), primary key (id)) [42101-214]
+2024-05-19 02:31:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "alumno" ya existe
+Table "alumno" already exists; SQL statement:
+create table alumno (id integer not null, apellido varchar(255), edad integer not null, estado varchar(255), nombre varchar(255), primary key (id)) [42101-214]
+2024-05-19 02:35:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "alumno" ya existe
+Table "alumno" already exists; SQL statement:
+create table alumno (id integer not null, apellido varchar(255), edad integer not null, estado varchar(255), nombre varchar(255), primary key (id)) [42101-214]
+2024-05-19 02:41:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "alumno" ya existe
+Table "alumno" already exists; SQL statement:
+create table alumno (id integer not null, apellido varchar(255), edad integer not null, estado varchar(255), nombre varchar(255), primary key (id)) [42101-214]
+2024-05-19 02:43:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "alumno" ya existe
+Table "alumno" already exists; SQL statement:
+create table alumno (id integer not null, apellido varchar(255), edad integer not null, estado varchar(255), nombre varchar(255), primary key (id)) [42101-214]
+2024-05-19 02:45:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "alumno" ya existe
+Table "alumno" already exists; SQL statement:
+create table alumno (id integer not null, apellido varchar(255), edad integer not null, estado varchar(255), nombre varchar(255), primary key (id)) [42101-214]
+2024-05-19 02:46:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "alumno" ya existe
+Table "alumno" already exists; SQL statement:
+create table alumno (id integer not null, apellido varchar(255), edad integer not null, estado varchar(255), nombre varchar(255), primary key (id)) [42101-214]
+2024-05-19 02:48:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "alumno" ya existe
+Table "alumno" already exists; SQL statement:
+create table alumno (id integer not null, apellido varchar(255), edad integer not null, estado varchar(255), nombre varchar(255), primary key (id)) [42101-214]
+2024-05-19 02:59:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "alumno" ya existe
+Table "alumno" already exists; SQL statement:
+create table alumno (id integer not null, apellido varchar(255), edad integer not null, estado varchar(255), nombre varchar(255), primary key (id)) [42101-214]
+2024-05-19 03:07:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "alumno" ya existe
+Table "alumno" already exists; SQL statement:
+create table alumno (id integer not null, apellido varchar(255), edad integer not null, estado varchar(255), nombre varchar(255), primary key (id)) [42101-214]
+2024-05-19 03:11:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "alumno" ya existe
+Table "alumno" already exists; SQL statement:
+create table alumno (id integer not null, apellido varchar(255), edad integer not null, estado varchar(255), nombre varchar(255), primary key (id)) [42101-214]
+2024-05-19 03:14:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "alumno" ya existe
+Table "alumno" already exists; SQL statement:
+create table alumno (id integer not null, apellido varchar(255), edad integer not null, estado varchar(255), nombre varchar(255), primary key (id)) [42101-214]
+2024-05-19 03:15:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "alumno" ya existe
+Table "alumno" already exists; SQL statement:
+create table alumno (id integer not null, apellido varchar(255), edad integer not null, estado varchar(255), nombre varchar(255), primary key (id)) [42101-214]
+2024-05-19 03:17:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "alumno" ya existe
+Table "alumno" already exists; SQL statement:
+create table alumno (id integer not null, apellido varchar(255), edad integer not null, estado varchar(255), nombre varchar(255), primary key (id)) [42101-214]
+2024-05-19 03:20:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "alumno" ya existe
+Table "alumno" already exists; SQL statement:
+create table alumno (id integer not null, apellido varchar(255), edad integer not null, estado varchar(255), nombre varchar(255), primary key (id)) [42101-214]
+2024-05-19 03:21:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "alumno" ya existe
+Table "alumno" already exists; SQL statement:
+create table alumno (id integer not null, apellido varchar(255), edad integer not null, estado varchar(255), nombre varchar(255), primary key (id)) [42101-214]
+2024-05-19 03:26:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "alumno" ya existe
+Table "alumno" already exists; SQL statement:
+create table alumno (id integer not null, apellido varchar(255), edad integer not null, estado varchar(255), nombre varchar(255), primary key (id)) [42101-214]
+2024-05-19 03:26:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "alumno" ya existe
+Table "alumno" already exists; SQL statement:
+create table alumno (id integer not null, apellido varchar(255), edad integer not null, estado varchar(255), nombre varchar(255), primary key (id)) [42101-214]
+2024-05-19 03:33:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "alumno" ya existe
+Table "alumno" already exists; SQL statement:
+create table alumno (id integer not null, apellido varchar(255), edad integer not null, estado varchar(255), nombre varchar(255), primary key (id)) [42101-214]
+2024-05-19 03:33:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "alumno" ya existe
+Table "alumno" already exists; SQL statement:
+create table alumno (id integer not null, apellido varchar(255), edad integer not null, estado varchar(255), nombre varchar(255), primary key (id)) [42101-214]
+2024-05-19 03:35:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "alumno" ya existe
+Table "alumno" already exists; SQL statement:
+create table alumno (id integer not null, apellido varchar(255), edad integer not null, estado varchar(255), nombre varchar(255), primary key (id)) [42101-214]

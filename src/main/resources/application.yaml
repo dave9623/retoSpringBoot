@@ -31,12 +31,12 @@ spring:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
         implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
       ddl-auto: none
-    generate-ddl: true
+    generate-ddl: false
     show-sql: true
 
-logging:
-  level:
-    org.springframework.security: DEBUG
+#logging:
+#  level:
+#    root: INFO
 
 application:
   api: dev
