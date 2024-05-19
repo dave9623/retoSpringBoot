@@ -1,6 +1,7 @@
 package org.retosb.retoencorasb.service;
 
 import lombok.extern.slf4j.Slf4j;
+import org.retosb.retoencorasb.dto.AlumnoReqDto;
 import org.retosb.retoencorasb.model.AlumnoModel;
 import org.retosb.retoencorasb.repository.AlumnoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +21,7 @@ public class AlumnoServiceImpl implements AlumnoService{
     private AlumnoRepository alumnoRepository;
 
     @Override
-    public Mono<AlumnoModel> save(AlumnoModel request) {
+    public Mono<AlumnoModel> save(AlumnoReqDto request) {
         log.info("INICIO PROCESO ==> REGISTRO ALUMNO");
         //Se consulta si existe registro con id del request
         Optional<AlumnoModel> alumno = alumnoRepository.findById(request.getId());
@@ -32,7 +33,13 @@ public class AlumnoServiceImpl implements AlumnoService{
         }
 
         log.info(MessageFormat.format("SE REGISTRA ALUMNO CON ID [{0}]",request.getId()));
-        return Mono.just(alumnoRepository.save(request));
+        return Mono.just(alumnoRepository.save(AlumnoModel.builder()
+                .id(request.getId())
+                .nombre(request.getNombre())
+                .apellido(request.getApellido())
+                .estado(request.getEstado())
+                .edad(request.getEdad())
+                .build()));
     }
 
     @Override

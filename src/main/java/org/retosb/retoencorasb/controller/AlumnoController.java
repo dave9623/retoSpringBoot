@@ -1,6 +1,7 @@
 package org.retosb.retoencorasb.controller;
 
 import lombok.extern.slf4j.Slf4j;
+import org.retosb.retoencorasb.dto.AlumnoReqDto;
 import org.retosb.retoencorasb.model.AlumnoModel;
 import org.retosb.retoencorasb.service.AlumnoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +17,7 @@ public class AlumnoController {
     private AlumnoService alumnoService;
 
     @PutMapping("/save")
-    private Mono<AlumnoModel> saveAlumno (@RequestBody AlumnoModel request){
+    private Mono<AlumnoModel> saveAlumno (@RequestBody AlumnoReqDto request){
         return alumnoService.save(request);
     }
 
