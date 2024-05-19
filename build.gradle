@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id 'org.springframework.boot' version '2.7.7'
     id 'io.spring.dependency-management' version '1.1.4'
+    id 'jacoco'
 }
 
 group = 'org.reto-sb'
@@ -33,9 +34,30 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 }
 
-tasks.named('test') {
+test {
     useJUnitPlatform()
+}
+
+jacocoTestReport {
+    dependsOn test
+    reports {
+        getHtml()
+        getXml()
+    }
+    afterEvaluate {
+        classDirectories = files(classDirectories.files.collect {
+            fileTree(dir: it, exclude: [
+                    'org/retosb/retoencorasb/config/**',
+                    'org/retosb/retoencorasb/controller/**',
+                    'org/retosb/retoencorasb/dto/**',
+                    'org/retosb/retoencorasb/model/**',
+                    'org/retosb/retoencorasb/service/AlumnoService.java',
+                    'org.retosb.retoencorasb.RetoEncoraSbApplication'
+            ])
+        })
+    }
 }
