@@ -1,0 +1,48 @@
+{
+	"info": {
+		"_postman_id": "4bf5d724-b3f7-48ca-82c7-ec8d55b29110",
+		"name": "SPRINGBOOT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "31874569"
+	},
+	"item": [
+		{
+			"name": "registrar-alumno",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "RetoSb-18052024"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"NombreTest\",\r\n    \"apellido\": \"ApellidoTest\",\r\n    \"estado\":\"1\",\r\n    \"edad\":18\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8023/api/alumno/save"
+			},
+			"response": []
+		},
+		{
+			"name": "obtener-activos",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "RetoSb-18052024",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:8023/api/alumno/get"
+			},
+			"response": []
+		}
+	]
+}
