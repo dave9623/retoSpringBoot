@@ -1,0 +1,50 @@
+server:
+  port: 8023
+spring:
+  datasource:
+    url: jdbc:h2:file:./DATABASE;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE;MODE=MySQL;DATABASE_TO_UPPER=false;
+    driverClassName: org.h2.Driver
+    username: test
+    password: test
+    hikari:
+      connectionTimeout: 300000
+      idleTimeout: 300000
+      max-lifetime: 300000
+
+  #  h2:
+  #    console:
+  #      enabled: true
+  #      path: /h2-console
+
+
+  flyway:
+    user: test
+    password: test
+    #    schemas: PUBLIC
+    url: jdbc:h2:file:./DATABASE;DB_CLOSE_ON_EXIT=FALSE;AUTO_RECONNECT=TRUE;MODE=MySQL;DATABASE_TO_UPPER=false;
+    baseline-on-migrate: true
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+      ddl-auto: none
+    generate-ddl: true
+    show-sql: true
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+
+application:
+  api: dev
+
+h2-server:
+  port: 8081
+
+jwt:
+  secret: RetoSb-18052024
+  timeExpire: 120
+  acceptExpire: 30
