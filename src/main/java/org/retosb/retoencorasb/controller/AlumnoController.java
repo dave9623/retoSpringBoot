@@ -5,10 +5,7 @@ import org.retosb.retoencorasb.dto.AlumnoReqDto;
 import org.retosb.retoencorasb.model.AlumnoModel;
 import org.retosb.retoencorasb.service.AlumnoService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.server.ResponseStatusException;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -22,7 +19,7 @@ public class AlumnoController {
     private AlumnoService alumnoService;
 
     @PutMapping("/save")
-    private Mono<AlumnoModel> saveAlumno (@RequestBody  @Valid AlumnoReqDto request){
+    private Mono<AlumnoModel> saveAlumno (@Valid @RequestBody AlumnoReqDto request){
         return alumnoService.save(request);
     }
 

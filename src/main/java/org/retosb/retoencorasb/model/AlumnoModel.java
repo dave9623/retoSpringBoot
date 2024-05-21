@@ -20,18 +20,9 @@ import java.io.Serializable;
 @ToString
 public class AlumnoModel implements Serializable {
     @Id
-    @Positive
-    int id;
-
-    @NotBlank
-    String nombre;
-
-    @NotBlank
-    String apellido;
-
-    @NotBlank
-    String estado;
-
-    @Positive
-    int edad;
+    private int id;
+    private String nombre;
+    private String apellido;
+    private String estado;
+    private int edad;
 }
